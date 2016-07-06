@@ -1,0 +1,92 @@
+<ul class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Pages</a></li>
+    <li class="active">Jobs</li>
+</ul>
+<!-- BEGIN SIDEBAR & CONTENT -->
+<div class="row margin-bottom-40" ng-init="init();">
+    <!-- BEGIN CONTENT -->
+    <div class="col-md-9 col-sm-9">
+        <div class="content-page">
+            <div class="well" ng-repeat="job in jobs">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h6 style="padding-top: 0px;">{{job.job_title}}</h6>
+                    </div>
+                </div>
+                <br>
+                <div class="row" style="margin-bottom: 5px;">
+                    <div class="col-md-4">
+                        <span><i class="fa fa-bank"></i> Company: </span>
+                        <span>{{job.company}}({{job.agency}})</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span><i class="fa fa-reorder"></i> Categories: </span>
+                        <span class="badge badge-info badge-roundless">{{job.category}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span><i class="fa fa-map-marker"></i> City: </span>
+                        <span>{{job.city}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span><i class="fa fa-dollar"></i> Base Salary: </span>
+                        <span>{{job.base_salary}}</span>
+                    </div>
+                    <div class="col-md-4">
+                        <span><i class="fa fa-heart"></i> Open Positions: </span>
+                        <span>{{job.number_open_positions}}</span>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>{{job.job_body}}</span>
+                    </div>
+                </div>
+            </div>
+            <div><a ng-click="loadMore();" style="color: #428bca; font-size: 16px; cursor: pointer;">Load More...</a></div>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-sm-3 sidebar2">
+        <h2>Our Contacts</h2>
+        <address>
+            <strong>Loop, Inc.</strong><br>
+            795 Park Ave, Suite 120<br>
+            San Francisco, CA 94107<br>
+            <abbr title="Phone">P:</abbr> (234) 145-1810
+        </address>
+        <address>
+            <strong>Email</strong><br>
+            <a href="mailto:info@email.com">info@email.com</a><br>
+            <a href="mailto:support@example.com">support@example.com</a>
+        </address>
+
+        <h2 class="padding-top-20">Contact Form</h2>
+        <!-- BEGIN FORM-->
+        <form action="#" role="form">
+            <div class="form-group">
+                <label for="career-name">Name</label>
+                <input type="text" class="form-control" id="career-name">
+            </div>
+            <div class="form-group">
+                <label for="career-position">Position</label>
+                <select class="form-control" id="career-position">
+                    <option>Senior Software Engineer</option>
+                    <option>Systems Administrator/Operations Engineer</option>
+                    <option>Technical Support Engineer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="career-resume">Resume</label>
+                <input type="file" id="career-resume">
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="icon-ok"></i> Send</button>
+        </form>
+        <!-- END FORM-->
+    </div>
+    <!-- END CONTENT -->
+</div>
+<!-- BEGIN SIDEBAR & CONTENT -->
